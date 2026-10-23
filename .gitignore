@@ -1,0 +1,40 @@
+
+# Ambiente virtual
+venv/
+.venv/
+env/
+stockflow_api/
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Banco de dados local
+db.sqlite3
+db.sqlite3-journal
+
+# Arquivos temporários do Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Arquivos de teste e cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Configurações locais de editores
+.vscode/
+.idea/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos estáticos coletados e uploads locais
+staticfiles/
+media/
