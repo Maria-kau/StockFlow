@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('products.urls')),
     path('api/inventory/', include('inventory.urls')),
+    path("api/accounts/", include("accounts.urls")),
 ]
 #   api     include  \[
 #       \text{caminho},\ \text{aplicacao.urls}
