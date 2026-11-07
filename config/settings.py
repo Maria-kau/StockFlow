@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/6.1/topics/settings/
 
 from pathlib import Path
 import os
+from urllib.parse import urlparse, parse_qsl
 from dotenv import load_dotenv
 
 
@@ -82,10 +83,21 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 # Database
 
+# Banco de dados PostgreSQL - Neon
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+tmpPostgres = urlparse(DATABASE_URL)
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": tmpPostgres.path.lstrip("/"),
+        "USER": tmpPostgres.username,
+        "PASSWORD": tmpPostgres.password,
+        "HOST": tmpPostgres.hostname,
+        "PORT": tmpPostgres.port or 5432,
+        "OPTIONS": dict(parse_qsl(tmpPostgres.query)),
     }
 }
 
