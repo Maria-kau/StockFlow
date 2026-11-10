@@ -34,32 +34,6 @@ O projeto utiliza Django REST Framework para disponibilizar endpoints REST, Post
 
 **Endpoint de produtos:** https://stockflow-xykg.onrender.com/api/products/
 
-## Execução local
-
-1. Clone o repositório:
-
-   `git clone https://github.com/Maria-kau/StockFlow.git`
-
-2. Instale as dependências:
-
-   `pip install -r requirements.txt`
-
-3. Configure as variáveis de ambiente no arquivo `.env`.
-
-4. Execute as migrações:
-
-   `python manage.py migrate`
-
-5. Inicie o servidor:
-
-   `python manage.py runserver`
-
-## Testes
-
-Execute os testes automatizados com:
-
-`python manage.py test`
-
 ## Objetivo
 
 Projeto desenvolvido para aplicar conceitos de desenvolvimento back-end, construção de APIs REST, regras de negócio, autenticação, controle de acesso e gerenciamento de banco de dados.
